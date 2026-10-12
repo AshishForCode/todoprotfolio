@@ -10,7 +10,7 @@ const CONFIG = {
     linkedin: "https://linkedin.com/in/yourprofile",
     email: "you@example.com"
   },
-  accentColor: { h: 245, s: 75, l: 59 },
+  accentColor: { h: 217, s: 85, l: 52 },
   pomodoro: {
     work: 25,    // minutes
     short: 5,    // minutes
@@ -1009,12 +1009,6 @@ function renderPomodoro() {
       <div class="pomodoro-label">${modeLabels[pomodoroState.mode]}</div>
       <div class="pomodoro-display">
         <svg class="pomodoro-ring" viewBox="0 0 200 200">
-          <defs>
-            <linearGradient id="pomodoroGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l))" />
-              <stop offset="100%" style="stop-color: hsl(calc(var(--accent-h) + 30), var(--accent-s), var(--accent-l))" />
-            </linearGradient>
-          </defs>
           <circle class="pomodoro-ring-bg" cx="100" cy="100" r="90"/>
           <circle class="pomodoro-ring-fill" cx="100" cy="100" r="90" 
             style="stroke-dasharray: ${circumference}; stroke-dashoffset: ${offset};"/>
